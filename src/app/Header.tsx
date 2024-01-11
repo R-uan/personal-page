@@ -1,15 +1,15 @@
+"use client";
+import { UseSnapPositionContext } from "./SnapPositionContext";
+
 export default function Header() {
+	const { CurrentPosition } = UseSnapPositionContext();
+	const MenuTextColor = "text-[black]";
+	const SelectedMenuTextColor = "text-[green]";
 	return (
-		<header className="absolute p-1 flex flex-row relative h-[7vh]">
+		<header className="absolute top-1 flex flex-row h-[7vh] w-[100%] z-50">
 			<div className="text-3xl left-[12vw] absolute">
-				<h1>Logo</h1>
+				<h1 id="header-logo">LOGO</h1>
 			</div>
-			<ul className="flex flex-row gap-5 p-3 w-fit absolute right-[12vw] text-[white]">
-				<li>Home</li>
-				<li>Repositories</li>
-				<li>About me</li>
-				<li>Contact</li>
-			</ul>
 		</header>
 	);
 }
