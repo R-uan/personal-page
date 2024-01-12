@@ -1,5 +1,5 @@
 "use client";
-import { UseSnapPositionContext } from "./SnapPositionContext";
+import { UseSnapPositionContext } from "../_context/SnapPositionContext";
 
 export default function Header() {
 	const { CurrentPosition } = UseSnapPositionContext();
