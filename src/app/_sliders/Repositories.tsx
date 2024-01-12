@@ -1,3 +1,3 @@
 export default function Repositories() {
-	return <div className="sliders"></div>;
+	return <div id="repos" className="sliders bg-[#F8F4EC]"></div>;
 }
