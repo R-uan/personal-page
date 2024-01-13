@@ -4,6 +4,9 @@ import { UseSnapPositionContext } from "../_context/SnapPositionContext";
 
 export default function NavBar() {
 	const { SetCurrentPosition, CurrentPosition } = UseSnapPositionContext();
+	useEffect(() => {
+		SetCurrentPosition!(1);
+	}, []);
 	const Pages = [
 		{ name: "Home", tag: "#home" },
 		{ name: "About me", tag: "#about-me" },
@@ -11,20 +14,12 @@ export default function NavBar() {
 		{ name: "Contact", tag: "#contact" },
 	];
 
-	const lindo = `rounded-full flex justify-center align-middle w-[2vw] h-[2vh] 
-	hover:w-[6vw] 
-	hover:h-[3vh]
-	transition-all 
-	duration-[0.3s]`;
+	const NavButton = useRef(null);
+	function HandleStuff(event) {
+		console.log(event);
+	}
 
-	const linda = `h-full w-full flex items-center justify-start ml-1 text-[0] 
-	hover:text-[1vw] 
-	hover:duration-[0.5s]
-	hover:transition-[font-size] `;
-
-	const ULStyle = `
-	[&>*:nth-child(${CurrentPosition})]:w-[5vw]
-	${
+	const ULStyle = `[&>*:nth-child(${CurrentPosition ?? 1})]:w-[5vw] ${
 		CurrentPosition! % 2 == 0
 			? "[&>*]:text-black [&>*]:bg-[white]"
 			: "[&>*]:text-white [&>*]:bg-[black]"
@@ -32,13 +27,23 @@ export default function NavBar() {
 
 	return (
 		<div className="w-fit h-[20vh] absolute right-[2vw] z-50 -translate-y-2/4 top-2/4 items">
-			<ul className={"flex flex-col gap-1 w-fit text-2xl items-end  " + ULStyle}>
-				{Pages.map((tag) => {
+			<ul className={"flex flex-col gap-1 w-fit text-2xl items-end"}>
+				<li>{CurrentPosition}</li>
+				{Pages.map((tag, index) => {
 					return (
-						<li className={lindo}>
-							<a href={tag.tag} className={linda}>
+						<li key={index + 1} className="">
+							<button
+								onClick={(event) => {
+									HandleStuff(event);
+								}}
+								ref={NavButton}
+								className={`${
+									CurrentPosition == index + 1
+										? "nav-option current"
+										: "nav-option"
+								}`}>
 								{tag.name}
-							</a>
+							</button>
 						</li>
 					);
 				})}

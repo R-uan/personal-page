@@ -35,3 +35,26 @@ body {
 	width: 100%;
 	height: 100vh;
 }
+
+.nav-option {
+	display: flex;
+	align-items: center;
+	width: 2vw;
+	height: 2vh;
+	font-size: 0px;
+	border-radius: 9999px;
+	padding-left: 1vh;
+	background-color: black;
+	transition: all 0.3s;
+}
+
+.nav-option:hover {
+	width: 6vw;
+	height: 3vh;
+	font-size: medium;
+	transition: all 0.3s;
+}
+
+.current {
+	width: 3vw;
+}
