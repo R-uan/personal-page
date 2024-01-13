@@ -54,7 +54,9 @@ export default function LandingPage() {
 					<ul className="flex flex-row  w-fit h-fit m-1 gap-[0.5vw]">
 						{Technologies.map((Tech) => {
 							return (
-								<li className="relative flex justify-center align-middle min-w-[35.5px] min-h-[35.5px] w-[4.5vw] h-[9vh] items-center p-[1vh] text-[2.5vw] border-[3px] border-[#424769] bg-[#2D3250]">
+								<li
+									key={Tech.name}
+									className="relative flex justify-center align-middle min-w-[35.5px] min-h-[35.5px] w-[4.5vw] h-[9vh] items-center p-[1vh] text-[2.5vw] border-[3px] border-[#424769] bg-[#2D3250]">
 									{Tech.icon}
 									<span className="absolute left-[-2px] top-full mt-2 text-[0.9vw] min-h-[5px] min-w-[35.5px] w-[4.5vw] text-center border-[#424769] bg-[#2D3250]">
 										{Tech.name}

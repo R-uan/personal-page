@@ -12,7 +12,7 @@ export default function Home() {
 	function HandleScroll(event: React.UIEvent<HTMLDivElement>) {
 		const WindowSize = Math.round(window.innerHeight);
 		const CurrentPosition = Math.round(event.currentTarget.scrollTop);
-		if (CurrentPosition >= 0 && SetCurrentPosition) {
+		if (CurrentPosition && SetCurrentPosition) {
 			if (CurrentPosition < WindowSize) {
 				SetCurrentPosition(1);
 			}
