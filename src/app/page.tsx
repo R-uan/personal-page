@@ -14,16 +14,16 @@ export default function Home() {
 		const CurrentPosition = Math.round(event.currentTarget.scrollTop);
 		if (CurrentPosition && SetCurrentPosition) {
 			if (CurrentPosition < WindowSize) {
-				SetCurrentPosition(1);
+				SetCurrentPosition(0);
 			}
 			if (CurrentPosition > WindowSize / 2) {
-				SetCurrentPosition(2);
+				SetCurrentPosition(1);
 			}
 			if (CurrentPosition > WindowSize * 1.5) {
-				SetCurrentPosition(3);
+				SetCurrentPosition(2);
 			}
 			if (CurrentPosition > WindowSize * 2.5) {
-				SetCurrentPosition(4);
+				SetCurrentPosition(3);
 			}
 		}
 	}

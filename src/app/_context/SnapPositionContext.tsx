@@ -9,7 +9,7 @@ interface ContextInterface {
 const SnapPositionContext = createContext<ContextInterface | null>(null);
 
 export default function SnapPositionProvider({ children }: { children: ReactNode }) {
-	const [CurrentPosition, SetCurrentPosition] = useState(1);
+	const [CurrentPosition, SetCurrentPosition] = useState(0);
 	return (
 		<SnapPositionContext.Provider value={{ CurrentPosition, SetCurrentPosition }}>
 			{children}
