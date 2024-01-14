@@ -8,6 +8,20 @@ const config: Config = {
 	],
 	theme: {
 		extend: {
+			animation: {
+				fadeInLeft: "fadeInLeft 1.5s ease 1",
+				fadeIn: "fadeIn 1.5s ease 1",
+			},
+			keyframes: {
+				fadeInLeft: {
+					"0%": { transform: "translateY(30%)", opacity: "0%" },
+					"100%": { transform: "translateY(0)", opacity: "100%" },
+				},
+				fadeIn: {
+					"0%": { opacity: "0%" },
+					"100%": { opacity: "100%" },
+				},
+			},
 			backgroundImage: {
 				"gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
 				"gradient-conic":
@@ -15,6 +29,6 @@ const config: Config = {
 			},
 		},
 	},
-	plugins: [],
+	plugins: [require("tailwindcss-animation-delay")],
 };
 export default config;
