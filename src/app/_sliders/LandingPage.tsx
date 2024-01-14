@@ -23,8 +23,7 @@ export default function LandingPage() {
 		{ name: "Docker", icon: <FaDocker /> },
 		/* 	{ name: "Git", icon: <BiLogoGit /> }, */
 	];
-	/* bg-[linear-gradient(45deg,#332941,#3B3486)] */
-	/* bg-gradient-to-r from-[#332941] to-[#3B3486] */
+
 	return (
 		<div id="home" className="flex flex-row sliders relative overflow-hidden bg-[#1B4242]">
 			<div className="flex flex-col min-w-[384px] w-[45vw] h-fit ml-[10vw] mt-[5vh] z-40">
@@ -33,7 +32,9 @@ export default function LandingPage() {
 						<h1
 							id="main-text-title"
 							className="mb-3 text-[6.4vh] leading-tight text-[#d9c84d]">
-							Main Text Title Is Quite Big Actually
+							Aspiring
+							<br />
+							Web Developer
 						</h1>
 					</b>
 					<p className=" text-justify text-[2.2vh]">
@@ -56,9 +57,9 @@ export default function LandingPage() {
 							return (
 								<li
 									key={Tech.name}
-									className="relative flex justify-center align-middle min-w-[35.5px] min-h-[35.5px] w-[4.5vw] h-[9vh] items-center p-[1vh] text-[2.5vw] border-[3px] border-[#424769] bg-[#2D3250]">
+									className="group relative flex justify-center align-middle min-w-[35.5px] min-h-[35.5px] w-[4.5vw] h-[9vh] items-center p-[1vh] text-[2.5vw] border-[3px] border-[#424769] bg-[#2D3250] this-is-the-span-class">
 									{Tech.icon}
-									<span className="absolute left-[-2px] top-full mt-2 text-[0.9vw] min-h-[5px] min-w-[35.5px] w-[4.5vw] text-center border-[#424769] bg-[#2D3250]">
+									<span className="absolute left-[-2px] mt-2 min-h-[5px] min-w-[35.5px] w-[4.5vw] text-center border-[#424769] bg-[#2D3250] lmaoxd">
 										{Tech.name}
 									</span>
 								</li>
