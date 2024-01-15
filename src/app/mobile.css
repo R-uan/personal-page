@@ -1,0 +1,163 @@
+/* Mobile */
+@media screen and (min-width: 360px) and (max-width: 767px) {
+	.landing-child-1 {
+		width: 80vw;
+		margin-top: 3vh;
+		margin-left: 20px;
+	}
+
+	.landing-child-2 {
+		width: 80vw;
+		gap: 10px;
+	}
+
+	.landing-child-2 > span {
+		font-size: 0.875rem;
+		line-height: 1.25rem;
+	}
+
+	.landing-child-2 > h1 {
+		font-size: 3rem;
+	}
+
+	.landing-child-2 > h3 {
+		font-size: 2.25rem;
+		line-height: 2.5rem;
+	}
+
+	.landing-child-2 > p {
+		font-size: 2.3vh;
+	}
+	.technologies {
+		margin-top: 10px;
+		row-gap: 5px;
+	}
+
+	.tech-icon {
+		font-size: 30px;
+		width: 60px;
+		height: 60px;
+	}
+
+	.tech-tooltip {
+		visibility: hidden;
+	}
+
+	.yellow-part {
+		visibility: hidden;
+	}
+
+	.gh-pfp {
+		visibility: hidden;
+	}
+
+	.nav-option {
+		display: flex;
+		align-items: center;
+		width: 10px;
+		height: 10px;
+		font-size: 0px;
+		border-radius: 9999px;
+		transition: all 0.3s;
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+	.landing-child-1 {
+		margin-top: 3vh;
+		width: 80vw;
+	}
+
+	.landing-child-2 {
+		width: 80vw;
+		gap: 10px;
+	}
+
+	.landing-child-2 > h3 {
+		font-size: 4.25rem;
+		line-height: 4.5rem;
+	}
+
+	.landing-child-2 > p {
+		min-height: fit-content;
+		height: fit-content;
+		font-size: 2.3vh;
+	}
+
+	.technologies {
+		margin-top: 5vh;
+		column-gap: 1vw;
+		row-gap: 1vh;
+	}
+
+	.tech-icon {
+		font-size: 50px;
+		width: clamp(50px, 20vw, 115px);
+		height: clamp(50px, 20vw, 115px);
+	}
+	.tech-tooltip {
+		visibility: hidden;
+	}
+
+	.yellow-part {
+		visibility: hidden;
+	}
+
+	.landing-footer {
+		height: 35px;
+	}
+
+	.gh-pfp {
+		visibility: hidden;
+	}
+
+	.nav-option {
+		display: flex;
+		align-items: center;
+		width: 15px;
+		height: 15px;
+		font-size: 0px;
+		border-radius: 9999px;
+		transition: all 0.3s;
+	}
+}
+
+@media screen and (min-width: 1001px) and (max-width: 1260px) {
+	.gh-pfp,
+	.yellow-part {
+		visibility: hidden;
+	}
+
+	.landing-child-1 {
+		width: 80vw;
+	}
+
+	.landing-child-2 {
+		width: 80vw;
+	}
+
+	.landing-child-2 > p {
+		min-height: fit-content;
+	}
+
+	.technologies {
+		display: flex;
+		grid-template-columns: repeat(7, minmax(0, 1fr));
+		margin-top: 2vh;
+		column-gap: 1vw;
+		row-gap: 5.3vh;
+	}
+
+	.tech-icon {
+		width: clamp(30px, 7vw, 90px);
+		height: clamp(30px, 7vw, 90px);
+	}
+	.tech-tooltip {
+		width: clamp(30px, 7vw, 90px);
+		font-size: 1rem;
+		top: 100%;
+		min-height: 5px;
+		height: fit-content;
+		transition: all 0.2s;
+	}
+}

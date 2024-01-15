@@ -4,6 +4,7 @@ import LandingPage from "./_sliders/LandingPage";
 import Repositories from "./_sliders/Repositories";
 import { UseSnapPositionContext } from "./_context/SnapPositionContext";
 import ContactMe from "./_sliders/ContactMe";
+import "./mobile.css";
 
 export default function Home() {
 	const { SetCurrentPosition } = UseSnapPositionContext();

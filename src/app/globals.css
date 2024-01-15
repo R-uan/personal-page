@@ -25,6 +25,7 @@ body {
 	margin: 0;
 	padding: 0;
 	background-color: black;
+	overflow-x: hidden;
 }
 
 #app {
@@ -48,12 +49,12 @@ body {
 	height: 100vh;
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1024px) {
 	.nav-option {
 		display: flex;
 		align-items: center;
-		width: 2vw;
-		height: 2vh;
+		width: 30px;
+		height: 30px;
 		font-size: 0px;
 		border-radius: 9999px;
 		padding-left: 1vh;
@@ -61,15 +62,16 @@ body {
 	}
 
 	.nav-option:hover {
-		width: 6vw;
-		height: 3vh;
-		font-size: medium;
+		width: 90px;
+		height: 30px;
+		font-size: 1rem;
 		transition: all 0.3s;
 	}
 
 	.current {
-		width: 3vw;
+		width: 45px;
 	}
+
 	.tech-tooltip {
 		min-height: 1px;
 		height: 0;
@@ -87,16 +89,9 @@ body {
 	}
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (min-width: 360px) and (max-width: 1023px) {
 	.current {
 		background-color: yellow;
-	}
-	.tech-tooltip {
-		font-size: 1rem;
-		top: 100%;
-		min-height: 5px;
-		height: fit-content;
-		transition: all 0.2s;
 	}
 
 	.nav-option {

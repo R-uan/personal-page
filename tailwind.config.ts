@@ -10,7 +10,7 @@ const config: Config = {
 	theme: {
 		extend: {
 			screens: {
-				mobile: { min: "481px", max: "767px" },
+				mobile: { min: "360px", max: "767px" },
 				tablet: { min: "768px", max: "1024px" },
 				// => @media (max-width: 558px) { ... }
 				md: { max: "768px" },
