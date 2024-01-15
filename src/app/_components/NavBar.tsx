@@ -25,8 +25,8 @@ export default function NavBar() {
 	}`;
 
 	return (
-		<div className="w-fit h-fit absolute right-[2vw] z-50 -translate-y-2/4 top-2/4 items">
-			<ul className={"flex flex-col gap-1 w-fit text-2xl items-end"}>
+		<div className="w-fit h-fit absolute right-[2.5vw] z-50 -translate-y-2/4 top-2/4 items mobile:right-4">
+			<ul className="flex flex-col gap-1 w-fit text-2xl items-end">
 				{Pages.map((page, index) => {
 					return (
 						<li key={index}>

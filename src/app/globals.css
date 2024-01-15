@@ -2,8 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400;1,500;1,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;1,100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100&display=swap");
 
 /* font-family: 'Bebas Neue', sans-serif;
 font-family: 'Montserrat', sans-serif; */
@@ -12,6 +15,10 @@ font-family: 'Montserrat', sans-serif; */
 	color: white;
 	font-family: "Inconsolata", monospace;
 	scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+	display: none;
 }
 
 body {
@@ -28,50 +35,77 @@ body {
 	background-color: white;
 }
 
+.font-systemui {
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+		Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
 .sliders {
 	scroll-snap-align: start;
 	scroll-snap-stop: always;
-	padding-top: 10vh;
+	/* padding-top: 10vh; */
 	width: 100%;
 	height: 100vh;
 }
 
-.nav-option {
-	display: flex;
-	align-items: center;
-	width: 2vw;
-	height: 2vh;
-	font-size: 0px;
-	border-radius: 9999px;
-	padding-left: 1vh;
-	transition: all 0.3s;
+@media screen and (min-width: 1000px) {
+	.nav-option {
+		display: flex;
+		align-items: center;
+		width: 2vw;
+		height: 2vh;
+		font-size: 0px;
+		border-radius: 9999px;
+		padding-left: 1vh;
+		transition: all 0.3s;
+	}
+
+	.nav-option:hover {
+		width: 6vw;
+		height: 3vh;
+		font-size: medium;
+		transition: all 0.3s;
+	}
+
+	.current {
+		width: 3vw;
+	}
+	.tech-tooltip {
+		min-height: 1px;
+		height: 0;
+		font-size: 0;
+		top: 90%;
+		transition: all 0.1s;
+	}
+
+	.tech-icon:hover > .tech-tooltip {
+		font-size: 0.9vw;
+		top: 100%;
+		min-height: 5px;
+		height: fit-content;
+		transition: all 0.2s;
+	}
 }
 
-.nav-option:hover {
-	width: 6vw;
-	height: 3vh;
-	font-size: medium;
-	transition: all 0.3s;
-}
+@media screen and (max-width: 1000px) {
+	.current {
+		background-color: yellow;
+	}
+	.tech-tooltip {
+		font-size: 1rem;
+		top: 100%;
+		min-height: 5px;
+		height: fit-content;
+		transition: all 0.2s;
+	}
 
-.current {
-	width: 3vw;
-}
-
-.lmaoxd {
-	min-height: 1px;
-	height: 0;
-	font-size: 0;
-	top: 90%;
-	visibility: visible;
-	transition: all 0.1s;
-}
-
-.this-is-the-span-class:hover > .lmaoxd {
-	font-size: 0.9vw;
-	top: 100%;
-	min-height: 5px;
-	height: fit-content;
-	transition: all 0.2s;
-	visibility: visible;
+	.nav-option {
+		display: flex;
+		align-items: center;
+		width: 5px;
+		height: 5px;
+		font-size: 0px;
+		border-radius: 9999px;
+		transition: all 0.3s;
+	}
 }
