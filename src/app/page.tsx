@@ -1,6 +1,4 @@
 "use client";
-
-import { UIEvent, UIEventHandler, useEffect, useState } from "react";
 import AboutMePage from "./_sliders/AboutMePage";
 import LandingPage from "./_sliders/LandingPage";
 import Repositories from "./_sliders/Repositories";
