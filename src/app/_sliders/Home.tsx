@@ -1,4 +1,4 @@
-import Image from "next/image";
+import "../../style/media-queries/media-home.css";
 import { BiLogoGit, BiLogoPostgresql, BiLogoTailwindCss } from "react-icons/bi";
 import { FaNodeJs, FaJava, FaDocker, FaGithub } from "react-icons/fa6";
 import {
@@ -53,9 +53,9 @@ export default function LandingPage() {
 							return (
 								<li
 									key={Tech.name}
-									className="tech-icon flex relative justify-center align-middle w-[clamp(40px,87px,87px)] h-[clamp(50px,87px,87px)] items-center p-[1vh] text-[2.5rem] border-[3px] border-[#181c16] bg-[#131712] animate-fadeIn animation-delay-500">
+									className="tech-icon flex relative justify-center align-middle w-[clamp(40px,87px,87px)] h-[clamp(50px,87px,87px)] items-center p-[1vh] text-[2.5rem] border-[3px] border-[#181c16] bg-[#131712] z-30 animate-fadeIn animation-delay-500">
 									{Tech.icon}
-									<span className="tech-tooltip absolute left-[-2px] mt-2 w-[clamp(50px,87px,87px)] text-center border-[#181c16] bg-[#131712]">
+									<span className="tech-tooltip top-full absolute left-[-2px] mt-2 w-[clamp(50px,87px,87px)] text-center border-[#181c16] bg-[#131712]">
 										{Tech.name}
 									</span>
 								</li>
@@ -74,7 +74,7 @@ export default function LandingPage() {
 
 			<div className="yellow-part h-[100vh] w-[29vw] absolute bottom-0 right-0 bg-[#F6F7C4] z-10"></div>
 			{/* BOTTOM BAR IS THIS ONE \/ */}
-			<div className="landing-footer h-[clamp(30px,6vh,6vh)] w-[100vw] flex items-center absolute bottom-0 bg-[#0F0F0F] z-20">
+			<div className="landing-footer h-[clamp(30px,6vh,6vh)] w-[100vw] flex items-center absolute bottom-0 bg-[#161616] z-20">
 				<div className="m-1 ml-3 mr-2 h-max w-[4vh]">
 					<FaGithub size="3vh" />
 				</div>
