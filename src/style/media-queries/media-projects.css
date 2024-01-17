@@ -1,9 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
 /* Smarthphone */
 @media screen and (min-width: 360px) /* and (max-width: 1024px) */ {
-	.testclass {
+	.experience-professional {
 		position: absolute;
 		visibility: hidden;
 	}
+
 	.experiences {
 		width: 90vw;
 		padding: 4px;
@@ -11,10 +14,23 @@
 		align-items: center;
 		padding-bottom: 40px;
 	}
-	.experience-professional {
-		visibility: hidden;
-		margin: 0px;
-		height: 0px;
+
+	.experiences > span {
+		width: 100%;
+		display: flex;
+		/* outline: 2px solid red; */
+		flex-direction: row-reverse;
+	}
+
+	.experiences > span > h1 {
+		line-height: 1;
+		font-size: 1.75rem;
+		font-family: "Bebas Neue", sans-serif;
+	}
+
+	.experience-personal > span > h1,
+	.experience-professional > span > h1 {
+		font-family: "Inter", sans-serif;
 	}
 
 	.repositories {
@@ -34,7 +50,9 @@
 		flex-direction: column;
 	}
 
-	.experience-personal > span > h1 {
+	.experience-personal > span > h1,
+	.experience-professional > span > h1 {
+		font-family: "Bebas Neue", sans-serif;
 		font-size: 1.25rem;
 		line-height: 1.75rem;
 		padding-left: 5px;
@@ -101,20 +119,99 @@
 
 @media screen and (min-width: 1280px) {
 	#about-me {
+		align-items: center;
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
 	}
 
-	.experiences {
-		width: 30vw;
+	.experience-professional {
+		position: relative;
+		overflow: hidden;
+		margin-bottom: 15px;
+		width: fit-content;
+		height: fit-content;
+		visibility: visible;
+		padding-bottom: 0px;
+		/* outline: 2px solid blue; */
 	}
 
-	.testclass {
+	.experience-personal {
+		height: fit-content;
+		width: fit-content;
+		align-items: flex-start;
+		/* outline: 2px solid orange; */
+	}
+
+	.experiences {
+		gap: 1px;
+		margin-left: 0;
+		margin-top: 40px;
+		overflow: hidden;
 		position: relative;
-		width: clamp(300px, 20vw, 20vw);
-		height: clamp(300px, 90vh, 90vh);
-		outline: 2px solid red;
-		visibility: visible;
+		height: fit-content;
+		padding-bottom: 4px;
+		align-items: flex-start;
+		/* outline: 2px solid green; */
+		width: clamp(90vw, 90vw, 90vw);
+	}
+
+	.experiences > span {
+		width: 100%;
+		display: flex;
+		/* outline: 2px solid red; */
+		flex-direction: row-reverse;
+	}
+
+	.experiences > span > h1 {
+		line-height: 1;
+		font-size: 3rem;
+		font-family: "Bebas Neue", sans-serif;
+	}
+
+	.experience-personal > span,
+	.experience-professional > span {
+		margin-bottom: 1vh;
+	}
+
+	.experience-personal > span > h1,
+	.experience-professional > span > h1 {
+		font-size: 2rem;
+		line-height: 2rem;
+		padding-left: 5px;
+		font-family: "Bebas Neue", sans-serif;
+	}
+
+	.repository {
+		width: 322px;
+		width: 84vw;
+		padding: 5px;
+		align-items: flex-start;
+		/* outline: 2px solid yellow; */
+	}
+
+	.repository > h3 {
+		line-height: 2rem;
+		font-size: 1.25rem;
+		width: clamp(310px, 20vw, 20vw);
+	}
+
+	.repository > p {
+		line-height: 1rem;
+		font-size: 0.875rem;
+		margin-bottom: 15px;
+	}
+
+	.repository > ul > li {
+		line-height: 1rem;
+		font-size: 0.875rem;
+	}
+	.repositories {
+		width: 89vw;
+		margin: 3px;
+		padding: 5px;
+		overflow-y: scroll;
+		flex-direction: row;
+		/* outline: 2px solid purple; */
 	}
 }
