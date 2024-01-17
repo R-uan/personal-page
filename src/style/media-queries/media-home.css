@@ -1,4 +1,4 @@
-/* Mobile */
+/* Home */
 @media screen and (min-width: 360px) and (max-width: 767px) {
 	.landing-child-1 {
 		width: 80vw;
@@ -62,7 +62,7 @@
 	}
 }
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
 	.landing-child-1 {
 		margin-top: 3vh;
 		width: 80vw;
@@ -92,8 +92,8 @@
 
 	.tech-icon {
 		font-size: 50px;
-		width: clamp(50px, 20vw, 115px);
-		height: clamp(50px, 20vw, 115px);
+		width: clamp(50px, 20vw, 100px);
+		height: clamp(50px, 20vw, 100px);
 	}
 	.tech-tooltip {
 		visibility: hidden;
@@ -122,7 +122,7 @@
 	}
 }
 
-@media screen and (min-width: 1001px) and (max-width: 1260px) {
+@media screen and (min-width: 1024px) and (max-width: 1280px) {
 	.gh-pfp,
 	.yellow-part {
 		visibility: hidden;
@@ -141,22 +141,66 @@
 	}
 
 	.technologies {
-		display: flex;
-		grid-template-columns: repeat(7, minmax(0, 1fr));
+		display: grid;
+		grid-template-columns: repeat(9, minmax(0, 1fr));
 		margin-top: 2vh;
 		column-gap: 1vw;
 		row-gap: 5.3vh;
 	}
 
-	.tech-icon {
-		width: clamp(30px, 7vw, 90px);
-		height: clamp(30px, 7vw, 90px);
+	.technologies > :last-child {
+		display: none;
 	}
+
+	.tech-icon {
+		font-size: 50px;
+		width: clamp(50px, 20vw, 80px);
+		height: clamp(50px, 20vw, 80px);
+	}
+
 	.tech-tooltip {
-		width: clamp(30px, 7vw, 90px);
+		visibility: visible;
 		font-size: 1rem;
 		top: 100%;
 		min-height: 5px;
+		width: clamp(50px, 20vw, 80px);
+		height: fit-content;
+		transition: all 0.2s;
+	}
+}
+
+@media screen and (min-width: 1280px) {
+	.landing-child-1 {
+		margin-top: 12vh;
+	}
+
+	.tech-tooltip {
+		min-height: 1px;
+		height: 0;
+		font-size: 0;
+		top: 90%;
+		transition: all 0.1s;
+	}
+
+	.technologies {
+		grid-template-columns: repeat(10, minmax(0, 1fr));
+	}
+
+	.tech-icon {
+		font-size: 50px;
+		width: clamp(50px, 20vw, 85px);
+		height: clamp(50px, 20vw, 85px);
+	}
+
+	.technologies > :last-child {
+		display: flex;
+	}
+
+	.tech-tooltip {
+		font-size: 1.25rem;
+		top: 100%;
+		min-height: 5px;
+		width: clamp(50px, 20vw, 85px);
 		height: fit-content;
 		transition: all 0.2s;
 	}

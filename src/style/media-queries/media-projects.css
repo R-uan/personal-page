@@ -1,0 +1,120 @@
+/* Smarthphone */
+@media screen and (min-width: 360px) /* and (max-width: 1024px) */ {
+	.testclass {
+		position: absolute;
+		visibility: hidden;
+	}
+	.experiences {
+		width: 90vw;
+		padding: 4px;
+		margin-left: 3vw;
+		align-items: center;
+		padding-bottom: 40px;
+	}
+	.experience-professional {
+		visibility: hidden;
+		margin: 0px;
+		height: 0px;
+	}
+
+	.repositories {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 20px;
+		width: fit-content;
+		height: fit-content;
+	}
+
+	.experience-professional,
+	.experience-personal {
+		display: flex;
+		width: 100%;
+		align-items: center;
+		flex-direction: column;
+	}
+
+	.experience-personal > span > h1 {
+		font-size: 1.25rem;
+		line-height: 1.75rem;
+		padding-left: 5px;
+	}
+
+	.repository {
+		padding: 5px;
+		width: 97%;
+	}
+
+	.repository > h3 {
+		font-size: 1.25rem;
+		line-height: 1.75rem;
+	}
+
+	.repository > p {
+		font-size: 0.875rem;
+		line-height: 1.25rem;
+	}
+
+	.repository > ul > li {
+		font-size: 0.875rem;
+		line-height: 1.25rem;
+	}
+
+	.gh-tags {
+		margin-right: 2px;
+	}
+
+	#about-me {
+		align-items: flex-end;
+		justify-content: flex-start;
+	}
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) {
+	.experience-personal > span > h1 {
+		font-size: 2.25rem /* 36px */;
+		line-height: 2.5rem /* 40px */;
+		padding-left: 5px;
+	}
+
+	.repository {
+		padding: 5px;
+		width: 97%;
+	}
+
+	.repository > h3 {
+		font-size: 2.25rem /* 36px */;
+		line-height: 2.5rem /* 40px */;
+	}
+
+	.repository > p {
+		font-size: 1.375rem /* 24px */;
+		line-height: 2rem /* 32px */;
+	}
+
+	.repository > ul > li {
+		font-size: 1.375rem /* 24px */;
+		line-height: 2rem /* 32px */;
+	}
+}
+
+@media screen and (min-width: 1280px) {
+	#about-me {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+	}
+
+	.experiences {
+		width: 30vw;
+	}
+
+	.testclass {
+		position: relative;
+		width: clamp(300px, 20vw, 20vw);
+		height: clamp(300px, 90vh, 90vh);
+		outline: 2px solid red;
+		visibility: visible;
+	}
+}
