@@ -10,7 +10,7 @@ import {
 	SiTailwindcss,
 } from "react-icons/si";
 
-export default function LandingPage() {
+export default function Home() {
 	const Technologies = [
 		{ name: "Node", icon: <FaNodeJs /> },
 		{ name: "React", icon: <SiReact /> },

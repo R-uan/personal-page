@@ -1,12 +1,11 @@
 "use client";
-import AboutMePage from "./_sliders/AboutMePage";
-import LandingPage from "./_sliders/LandingPage";
-import Repositories from "./_sliders/Repositories";
+import Projects from "./_sliders/Projects";
+import Home from "./_sliders/Home";
+import Repositories2 from "./_sliders/Repositories2";
 import { UseSnapPositionContext } from "./_context/SnapPositionContext";
 import ContactMe from "./_sliders/ContactMe";
-import "./mobile.css";
 
-export default function Home() {
+export default function App() {
 	const { SetCurrentPosition } = UseSnapPositionContext();
 	function HandleScroll(event: React.UIEvent<HTMLDivElement>) {
 		const WindowSize = Math.round(window.innerHeight);
@@ -28,9 +27,9 @@ export default function Home() {
 	}
 	return (
 		<div onScroll={HandleScroll} id="app">
-			<LandingPage />
-			<AboutMePage />
-			<Repositories />
+			<Home />
+			<Projects />
+			<Repositories2 />
 			<ContactMe />
 		</div>
 	);
