@@ -1,14 +1,39 @@
 /* Home */
-@media screen and (min-width: 360px) and (max-width: 767px) {
+.landing-child-1 {
+	outline: 2px solid red;
+}
+
+.landing-child-2 {
+	outline: 2px solid blue;
+}
+
+.technologies {
+	outline: 2px solid yellow;
+}
+
+.technologies-parent {
+	outline: 2px solid green;
+}
+/* Phones */
+@media screen and (min-width: 360px) /* and (max-width: 767px) */ {
+	.tech-tooltip,
+	.yellow-part,
+	.gh-pfp {
+		position: absolute;
+		visibility: hidden;
+	}
+
 	.landing-child-1 {
-		width: 80vw;
+		width: fit-content;
+		height: fit-content;
+		padding: 4px;
 		margin-top: 3vh;
-		margin-left: 20px;
+		margin-left: 5vw;
 	}
 
 	.landing-child-2 {
-		width: 80vw;
 		gap: 10px;
+		width: clamp(290px, 85vw, 530px);
 	}
 
 	.landing-child-2 > span {
@@ -18,59 +43,67 @@
 
 	.landing-child-2 > h1 {
 		font-size: 3rem;
+		line-height: 2.5rem;
 	}
 
 	.landing-child-2 > h3 {
-		font-size: 2.25rem;
-		line-height: 2.5rem;
+		font-size: 2.5rem;
+		line-height: 2rem;
 	}
 
 	.landing-child-2 > p {
 		font-size: 2.3vh;
+		color: #ccd5ae;
+		margin-top: clamp(10px, 3vh, 15px);
+		margin-bottom: clamp(10px, 3vh, 15px);
 	}
+
 	.technologies {
+		width: 100%;
+		row-gap: 1vw;
+		display: grid;
+		column-gap: 1vw;
 		margin-top: 10px;
-		row-gap: 5px;
+		height: fit-content;
+		padding-bottom: 0px;
+		justify-content: space-between;
+		grid-template-rows: repeat(2, min-content);
+		grid-template-columns: repeat(5, min-content);
 	}
 
 	.tech-icon {
-		font-size: 30px;
-		width: 60px;
-		height: 60px;
-	}
-
-	.tech-tooltip {
-		visibility: hidden;
-	}
-
-	.yellow-part {
-		visibility: hidden;
-	}
-
-	.gh-pfp {
-		visibility: hidden;
+		font-size: 8vw;
+		width: fit-content;
+		width: clamp(50px, 16vw, 100px);
+		height: clamp(50px, 16vw, 100px);
 	}
 
 	.nav-option {
-		display: flex;
-		align-items: center;
 		width: 10px;
 		height: 10px;
+		display: flex;
 		font-size: 0px;
+		align-items: center;
 		border-radius: 9999px;
 		transition: all 0.3s;
 	}
 }
 
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-	.landing-child-1 {
-		margin-top: 3vh;
-		width: 80vw;
+/* tablets */
+@media screen and (min-width: 768px) {
+	.landing-child-2 > span {
+		font-size: 1.25rem;
+		line-height: 1.75rem;
 	}
 
 	.landing-child-2 {
-		width: 80vw;
-		gap: 10px;
+		justify-content: space-between;
+		width: clamp(290px, 85vw, 670px);
+	}
+
+	.landing-child-2 > h1 {
+		font-size: 4rem;
+		line-height: 2.75rem;
 	}
 
 	.landing-child-2 > h3 {
@@ -78,100 +111,136 @@
 		line-height: 4.5rem;
 	}
 
-	.landing-child-2 > p {
-		min-height: fit-content;
-		height: fit-content;
-		font-size: 2.3vh;
-	}
-
-	.technologies {
-		margin-top: 5vh;
-		column-gap: 1vw;
-		row-gap: 1vh;
-	}
-
 	.tech-icon {
-		font-size: 50px;
-		width: clamp(50px, 20vw, 100px);
-		height: clamp(50px, 20vw, 100px);
-	}
-	.tech-tooltip {
-		visibility: hidden;
-	}
-
-	.yellow-part {
-		visibility: hidden;
+		font-size: 8vw;
+		width: clamp(50px, 16vw, 125px);
+		height: clamp(50px, 16vw, 125px);
 	}
 
 	.landing-footer {
 		height: 35px;
 	}
-
-	.gh-pfp {
-		visibility: hidden;
-	}
-
-	.nav-option {
-		display: flex;
-		align-items: center;
-		width: 15px;
-		height: 15px;
-		font-size: 0px;
-		border-radius: 9999px;
-		transition: all 0.3s;
-	}
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1280px) {
-	.gh-pfp,
-	.yellow-part {
-		visibility: hidden;
-	}
-
-	.landing-child-1 {
-		width: 80vw;
-	}
-
 	.landing-child-2 {
-		width: 80vw;
+		gap: 10px;
+		width: clamp(290px, 85vw, 85vw);
+	}
+
+	.landing-child-2 > span {
+		font-size: 2rem;
+		line-height: 2.25rem;
+	}
+
+	.landing-child-2 > h1 {
+		font-size: 5rem;
+		line-height: 5rem;
+	}
+
+	.landing-child-2 > h3 {
+		font-size: 5rem;
+		line-height: 4rem;
 	}
 
 	.landing-child-2 > p {
-		min-height: fit-content;
+		font-size: 2.75vh;
+		color: #ccd5ae;
+		margin-top: clamp(10px, 3vh, 15px);
+		margin-bottom: clamp(10px, 3vh, 15px);
 	}
 
 	.technologies {
-		display: grid;
-		grid-template-columns: repeat(9, minmax(0, 1fr));
-		margin-top: 2vh;
-		column-gap: 1vw;
-		row-gap: 5.3vh;
-	}
-
-	.technologies > :last-child {
-		display: none;
+		row-gap: 6vw;
+		column-gap: 3vw;
 	}
 
 	.tech-icon {
-		font-size: 50px;
-		width: clamp(50px, 20vw, 80px);
-		height: clamp(50px, 20vw, 80px);
+		font-size: 8vw;
+		width: clamp(50px, 16vw, 150px);
+		height: clamp(50px, 16vw, 150px);
 	}
 
 	.tech-tooltip {
 		visibility: visible;
-		font-size: 1rem;
+		font-size: 2vh;
 		top: 100%;
-		min-height: 5px;
-		width: clamp(50px, 20vw, 80px);
 		height: fit-content;
-		transition: all 0.2s;
+		width: clamp(50px, 16vw, 150px);
 	}
 }
 
+@media screen and (min-width: 767px) and (max-height: 760px) {
+	.landing-child-2 > span {
+		font-size: 2rem;
+		line-height: 2.25rem;
+	}
+
+	.landing-child-2 > h1 {
+		font-size: 4rem;
+		line-height: 3rem;
+	}
+
+	.landing-child-2 > h3 {
+		font-size: 4rem;
+		line-height: 3rem;
+	}
+
+	.landing-child-2 > p {
+		font-size: 1.2rem;
+	}
+
+	.technologies {
+		display: flex;
+		row-gap: 0;
+		column-gap: 0;
+	}
+
+	.tech-icon {
+		font-size: 7vh;
+		width: clamp(50px, 15vw, 80px);
+		height: clamp(50px, 15vw, 70px);
+	}
+
+	.tech-tooltip {
+		font-size: clamp(0.75rem, 2vw, 1rem);
+		width: clamp(50px, 15vw, 80px);
+		visibility: visible;
+	}
+}
+/* desktop */
 @media screen and (min-width: 1280px) {
-	.landing-child-1 {
-		margin-top: 12vh;
+	.gh-pfp,
+	.yellow-part,
+	.tech-tooltip {
+		visibility: visible;
+	}
+
+	.landing-child-2 {
+		gap: 10px;
+		width: clamp(290px, 54vw, 54vw);
+	}
+
+	.landing-child-2 > span {
+		font-size: clamp(2vw, 2vw, 2.25rem);
+		line-height: clamp(2vw, 2vw, 2.25rem);
+	}
+
+	.landing-child-2 > h1 {
+		font-size: clamp(4vw, 4vw, 4rem);
+		line-height: clamp(4vw, 4vw, 4rem);
+	}
+
+	.landing-child-2 > h3 {
+		font-size: clamp(4vw, 4vw, 4.75rem);
+		line-height: clamp(2vw, 2vw, 2rem);
+	}
+
+	.landing-child-2 > p {
+		font-size: clamp(0.7vw, 2vw, 1.5rem);
+		margin-top: 3vh;
+		margin-bottom: 3vh;
+		height: fit-content;
 	}
 
 	.tech-tooltip {
@@ -183,13 +252,18 @@
 	}
 
 	.technologies {
+		margin: 3px;
+		padding: 1px;
+		row-gap: 0;
+		column-gap: 0.82vw;
+		width: fit-content;
 		grid-template-columns: repeat(10, minmax(0, 1fr));
 	}
 
 	.tech-icon {
-		font-size: 50px;
-		width: clamp(50px, 20vw, 85px);
-		height: clamp(50px, 20vw, 85px);
+		font-size: 2.75rem;
+		width: clamp(70.53px, 15vw, 70.5px);
+		height: clamp(70.53px, 15vw, 70.5px);
 	}
 
 	.technologies > :last-child {
@@ -197,11 +271,21 @@
 	}
 
 	.tech-tooltip {
-		font-size: 1.25rem;
-		top: 100%;
+		top: 90%;
+		height: 0;
+		font-size: 0;
 		min-height: 5px;
-		width: clamp(50px, 20vw, 85px);
-		height: fit-content;
+		visibility: hidden;
 		transition: all 0.2s;
+		width: clamp(70.53px, 15vw, 70.5px);
+	}
+
+	.tech-icon:hover {
+		.tech-tooltip {
+			top: 100%;
+			font-size: 0.875rem;
+			visibility: visible;
+			height: fit-content;
+		}
 	}
 }

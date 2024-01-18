@@ -33,21 +33,22 @@ export default function Home() {
 					<span className="w-fit ml-1 font-mono text-[clamp(17px,2.3vh,2.3vh)] italic animate-fadeInLeft animation-delay-100">
 						Hi, I am
 					</span>
-					<h1 className="font-systemui font-thin mb-[-15px] w-fit -mt-2.5 text-[#F6F7C4] text-[clamp(40px,8vh,80px)] animate-fadeInLeft animation-delay-200">
+					<h1 className="font-systemui font-thin mb-[5px] w-fit -mt-2.5 text-[#F6F7C4] text-[clamp(40px,8vh,80px)] animate-fadeInLeft leading-[1] animation-delay-200">
 						Ruan Lopes.
 					</h1>
-					<h3 className="w-fit text-[clamp(40px,8vh,80px)] text-[#CEDEBD] font-semibold font-mono animate-fadeInLeft animation-delay-300">
+					<h3 className="w-fit text-[clamp(40px,8vh,80px)] text-[#CEDEBD] font-semibold leading-[1] font-mono animate-fadeInLeft animation-delay-300">
 						Aspiring Web Developer.
 					</h3>
-					<p className="w-full min-h-[152px] text-[clamp(15px,2.5vh,3vh)] animate-fadeInLeft animation-delay-400">
-						I have a passion for creating innovative and user-friendly digital
-						experiences. Eager to learn and grow in the ever-evolving world of web
-						development, I am dedicated to mastering various technologies and staying
-						abreast of industry trends.
+					<p className="w-full min-h-fit text-[clamp(15px,2.5vh,3vh)] animate-fadeInLeft animation-delay-400">
+						I'm a 22 years old brazilian with a passion for creating innovative and
+						user-friendly digital experiences. Eager to learn and grow in the
+						ever-evolving world of web development, I am dedicated to mastering various
+						technologies and always catching up with industry trends.
 					</p>
 				</div>
+				<hr />
 				{/* Technologies */}
-				<div className="w-full h-fit flex mt-4 mobile:mt-[2vh] tablet:mt-3">
+				<div className="technologies-parent w-full h-fit flex mt-4 mobile:mt-[2vh] tablet:mt-3">
 					<ul className="technologies flex flex-row w-fit h-fit gap-[7px] mobile:grid-cols-5 mobile:grid mobile:gap-y-2 tablet:grid tablet:grid-cols-5 tablet:gap-y-9 mobile:gap-7">
 						{Technologies.map((Tech, index) => {
 							return (
@@ -55,7 +56,7 @@ export default function Home() {
 									key={Tech.name}
 									className="tech-icon flex relative justify-center align-middle w-[clamp(40px,87px,87px)] h-[clamp(50px,87px,87px)] items-center p-[1vh] text-[2.5rem] border-[3px] border-[#181c16] bg-[#131712] z-30 animate-fadeIn animation-delay-500">
 									{Tech.icon}
-									<span className="tech-tooltip top-full absolute left-[-2px] mt-2 w-[clamp(50px,87px,87px)] text-center border-[#181c16] bg-[#131712]">
+									<span className="tech-tooltip top-full absolute left-[-2px] mt-2 w-[clamp(50px,87px,87px)] text-center border-[3px] border-[#181c16] bg-[#131712]">
 										{Tech.name}
 									</span>
 								</li>
