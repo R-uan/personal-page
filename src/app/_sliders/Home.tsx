@@ -1,14 +1,9 @@
 import "../../style/media-queries/media-home.css";
 import { BiLogoGit, BiLogoPostgresql, BiLogoTailwindCss } from "react-icons/bi";
 import { FaNodeJs, FaJava, FaDocker, FaGithub } from "react-icons/fa6";
-import {
-	SiReact,
-	SiExpress,
-	SiNextdotjs,
-	SiSpring,
-	SiMongodb,
-	SiTailwindcss,
-} from "react-icons/si";
+import { SiReact, SiExpress, SiNextdotjs, SiSpring, SiMongodb } from "react-icons/si";
+import Image from "next/image";
+import footer from "@/public/footer.svg";
 
 export default function Home() {
 	const Technologies = [
@@ -75,11 +70,8 @@ export default function Home() {
 
 			<div className="yellow-part h-[100vh] w-[29vw] absolute bottom-0 right-0 bg-[#F6F7C4] z-10"></div>
 			{/* BOTTOM BAR IS THIS ONE \/ */}
-			<div className="landing-footer h-[clamp(30px,6vh,6vh)] w-[100vw] flex items-center absolute bottom-0 bg-[#161616] z-20">
-				<div className="m-1 ml-3 mr-2 h-max w-[4vh]">
-					<FaGithub size="3vh" />
-				</div>
-				<span>R-uan</span>
+			<div className="landing-footer w-[100vw] flex items-center absolute bottom-0 z-20">
+				<Image alt="footer" src={footer} className="w-full"></Image>
 			</div>
 		</div>
 	);

@@ -8,9 +8,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;1,100&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100&display=swap");
 
-/* font-family: 'Bebas Neue', sans-serif;
-font-family: 'Montserrat', sans-serif; */
-/* #030d17 */
 * {
 	color: white;
 	font-family: "Inconsolata", monospace;
@@ -71,24 +68,8 @@ body {
 	}
 
 	.current {
-		width: 45px;
+		background-color: green;
 	}
-
-	/* .tech-tooltip {
-		min-height: 1px;
-		height: 0;
-		font-size: 0;
-		top: 90%;
-		transition: all 0.1s;
-	}
-
-	.tech-icon:hover > .tech-tooltip {
-		font-size: 0.9vw;
-		top: 100%;
-		min-height: 5px;
-		height: fit-content;
-		transition: all 0.2s;
-	} */
 }
 
 @media screen and (min-width: 360px) and (max-width: 1023px) {

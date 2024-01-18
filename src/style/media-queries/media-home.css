@@ -1,5 +1,5 @@
-/* Home */
-.landing-child-1 {
+/* Visualization */
+/* .landing-child-1 {
 	outline: 2px solid red;
 }
 
@@ -13,7 +13,8 @@
 
 .technologies-parent {
 	outline: 2px solid green;
-}
+} */
+
 /* Phones */
 @media screen and (min-width: 360px) /* and (max-width: 767px) */ {
 	.tech-tooltip,
@@ -115,10 +116,6 @@
 		font-size: 8vw;
 		width: clamp(50px, 16vw, 125px);
 		height: clamp(50px, 16vw, 125px);
-	}
-
-	.landing-footer {
-		height: 35px;
 	}
 }
 

@@ -4,7 +4,7 @@ import "../../style/media-queries/media-projects.css";
 export default function AboutMePage() {
 	const tags = ["react", "next", "nodejs", "tailwind", "typescript"];
 	return (
-		<div id="about-me" className="sliders flex justify-center bg-[#161616] gap-[10px]">
+		<div id="about-me" className="sliders flex justify-center bg-[#100F0F] gap-[10px]">
 			<div className="experiences mt-[64px] p-2 h-[90vh] flex flex-col gap-3 overflow-auto">
 				<span>
 					<h1>Featured Projects</h1>
