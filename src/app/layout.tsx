@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "./_components/Header";
 import SnapPositionProvider from "./_context/SnapPositionContext";
 import NavBar from "./_components/NavBar";
+import ColorThemeProvider from "./_context/ColorThemeContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,11 +17,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 	return (
 		<html lang="en">
 			<body className={inter.className}>
-				<SnapPositionProvider>
-					<NavBar />
-					<Header />
-					{children}
-				</SnapPositionProvider>
+				<ColorThemeProvider>
+					<SnapPositionProvider>
+						<NavBar />
+						<Header />
+						{children}
+					</SnapPositionProvider>
+				</ColorThemeProvider>
 			</body>
 		</html>
 	);

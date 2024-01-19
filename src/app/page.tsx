@@ -1,9 +1,9 @@
 "use client";
-import Projects from "./_sliders/Projects";
-import Home from "./_sliders/Home";
-import Repositories2 from "./_sliders/Repositories2";
+import Home from "./_pages/Home";
+import Projects from "./_pages/Projects";
+import ContactMe from "./_pages/ContactMe";
+import Repositories2 from "./_pages/Repositories2";
 import { UseSnapPositionContext } from "./_context/SnapPositionContext";
-import ContactMe from "./_sliders/ContactMe";
 
 export default function App() {
 	const { SetCurrentPosition } = UseSnapPositionContext();
