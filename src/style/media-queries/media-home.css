@@ -1,19 +1,7 @@
-/* Visualization */
-/* .landing-child-1 {
-	outline: 2px solid red;
+#home * {
+	transition: background-color 0.5s ease, color 0.5s ease;
+	transition: all 0.5s ease;
 }
-
-.landing-child-2 {
-	outline: 2px solid blue;
-}
-
-.technologies {
-	outline: 2px solid yellow;
-}
-
-.technologies-parent {
-	outline: 2px solid green;
-} */
 
 /* Phones */
 @media screen and (min-width: 360px) /* and (max-width: 767px) */ {
@@ -54,7 +42,6 @@
 
 	.landing-child-2 > p {
 		font-size: 2.3vh;
-		color: #ccd5ae;
 		margin-top: clamp(10px, 3vh, 15px);
 		margin-bottom: clamp(10px, 3vh, 15px);
 	}
@@ -77,16 +64,6 @@
 		width: fit-content;
 		width: clamp(50px, 16vw, 100px);
 		height: clamp(50px, 16vw, 100px);
-	}
-
-	.nav-option {
-		width: 10px;
-		height: 10px;
-		display: flex;
-		font-size: 0px;
-		align-items: center;
-		border-radius: 9999px;
-		transition: all 0.3s;
 	}
 }
 
@@ -142,7 +119,6 @@
 
 	.landing-child-2 > p {
 		font-size: 2.75vh;
-		color: #ccd5ae;
 		margin-top: clamp(10px, 3vh, 15px);
 		margin-bottom: clamp(10px, 3vh, 15px);
 	}
@@ -205,12 +181,17 @@
 		visibility: visible;
 	}
 }
+
 /* desktop */
 @media screen and (min-width: 1280px) {
 	.gh-pfp,
 	.yellow-part,
 	.tech-tooltip {
 		visibility: visible;
+	}
+
+	.landing-child-1 {
+		margin-top: 60px;
 	}
 
 	.landing-child-2 {
@@ -269,20 +250,21 @@
 
 	.tech-tooltip {
 		top: 90%;
-		height: 0;
+		left: -0.4px;
 		font-size: 0;
-		min-height: 5px;
 		visibility: hidden;
-		transition: all 0.2s;
+		height: fit-content;
+		transition: font-size 0.2s ease;
 		width: clamp(70.53px, 15vw, 70.5px);
 	}
 
 	.tech-icon:hover {
 		.tech-tooltip {
 			top: 100%;
+			min-height: 5px;
 			font-size: 0.875rem;
 			visibility: visible;
-			height: fit-content;
+			transition: font-size 0.1s ease;
 		}
 	}
 }
