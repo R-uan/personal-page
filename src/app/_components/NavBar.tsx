@@ -1,15 +1,18 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
+import "../../style/media-queries/nav-bar.css";
 import { UseSnapPositionContext } from "../_context/SnapPositionContext";
+import { UseColorThemeContext } from "../_context/ColorThemeContext";
 
 export default function NavBar() {
 	const { SetCurrentPosition, CurrentPosition } = UseSnapPositionContext();
 	useEffect(() => {
 		SetCurrentPosition!(0);
 	}, []);
+	const { CurrentTheme } = UseColorThemeContext();
 	const Pages = [
 		{ name: "Home", _id: "home" },
-		{ name: "About me", _id: "about-me" },
+		{ name: "Projects", _id: "projects" },
 		{ name: "Projects", _id: "repos" },
 		{ name: "Contact", _id: "contact" },
 	];
@@ -34,6 +37,12 @@ export default function NavBar() {
 							<button
 								onClick={(event) => {
 									HandleStuff(event, index);
+								}}
+								style={{
+									background:
+										CurrentPosition == index
+											? CurrentTheme.IconBackground
+											: "black",
 								}}
 								className={`${
 									CurrentPosition == index ? "nav-option current" : "nav-option"
