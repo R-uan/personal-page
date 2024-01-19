@@ -1,0 +1,82 @@
+@media screen and (min-width: 360px) and (max-width: 1023px) {
+	header {
+		left: 0;
+		width: 100vw;
+		justify-content: center;
+	}
+
+	.side-menu-button {
+		z-index: -50;
+		right: 2.5vw;
+		font-size: 1.5rem;
+		position: absolute;
+	}
+
+	.side-menu {
+		top: 0;
+		width: 100vw;
+		/* z-index: -50; */
+		overflow: hidden;
+		height: 100vh;
+		padding: 15px;
+		visibility: visible;
+		transition: all 0.5s ease;
+		border-left-width: 1px;
+		border-color: rgb(255, 255, 255);
+	}
+
+	.side-menu-options {
+		border-radius: 2px;
+		line-height: 1.25;
+		font-size: 1.5rem;
+		transition: font-size 0.2s ease;
+	}
+
+	.side-menu-options:hover {
+		font-size: 1.75rem;
+		transition: font-size 0.2s ease;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	header {
+		justify-content: flex-end;
+		padding-right: 5vw;
+	}
+
+	.header-logo {
+		position: absolute;
+		left: 7vw;
+	}
+
+	.side-menu-button {
+		z-index: -50;
+		right: 2.5vw;
+		font-size: 1.5rem;
+		position: absolute;
+	}
+
+	.side-menu {
+		top: 0;
+		width: 20vw;
+		right: -20vw;
+		height: 100vh;
+		padding: 15px;
+		visibility: visible;
+		transition: all 0.5s ease;
+		border-left-width: 1px;
+		border-color: rgb(255, 255, 255);
+	}
+
+	.side-menu-options {
+		border-radius: 2px;
+		line-height: 1.25;
+		font-size: 1.5rem;
+		transition: font-size 0.2s ease;
+	}
+
+	.side-menu-options:hover {
+		font-size: 1.75rem;
+		transition: font-size 0.2s ease;
+	}
+}
