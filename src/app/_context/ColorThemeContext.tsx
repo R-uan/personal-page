@@ -1,5 +1,5 @@
 "use client";
-import ColorThemes, { Theme } from "../ColorThemes";
+import ColorThemes, { Theme } from "../_scripts/ColorThemes";
 import { ReactNode, SetStateAction, createContext, useContext, useState } from "react";
 
 interface ColorThemeContextInterface {

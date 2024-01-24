@@ -67,7 +67,7 @@
 		width: 97%;
 	}
 
-	.repository > h3 {
+	.repository > a > span {
 		font-size: 1.25rem;
 		line-height: 1.75rem;
 	}
@@ -175,7 +175,7 @@
 
 	.experience-personal > span,
 	.experience-professional > span {
-		margin-bottom: 1vh;
+		margin-bottom: 5vh;
 	}
 
 	.experience-personal > span > h1,
@@ -187,8 +187,8 @@
 	}
 
 	.repository {
+		width: 150px;
 		width: 322px;
-		width: 84vw;
 		padding: 5px;
 		align-items: flex-start;
 		/* outline: 2px solid yellow; */
@@ -201,8 +201,9 @@
 	}
 
 	.repository > p {
+		height: 70px;
 		line-height: 1rem;
-		font-size: 0.875rem;
+		font-size: 1rem;
 		margin-bottom: 15px;
 	}
 
@@ -211,6 +212,8 @@
 		font-size: 0.875rem;
 	}
 	.repositories {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
 		width: 89vw;
 		margin: 3px;
 		padding: 5px;

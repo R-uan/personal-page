@@ -14,6 +14,10 @@
 	scroll-behavior: smooth;
 }
 
+.test {
+	outline: 2px solid red;
+}
+
 ::-webkit-scrollbar {
 	display: none;
 }

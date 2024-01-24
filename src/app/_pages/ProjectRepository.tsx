@@ -1,23 +1,29 @@
 import { UseColorThemeContext } from "../_context/ColorThemeContext";
+import { FaExternalLinkAlt } from "react-icons/fa";
+import IRepositories from "../_scripts/IRepositories";
 
-export default function TestComponent() {
+export default function Repository({ RepositoryData }: { RepositoryData: IRepositories }) {
 	const { CurrentTheme } = UseColorThemeContext();
-	const tags = ["react", "next", "nodejs", "tailwind", "typescript"];
+	let { title, topics } = RepositoryData;
+
+	function capitalizeFirstLetter(word: string) {
+		return word.charAt(0).toUpperCase() + word.slice(1);
+	}
+
 	return (
-		<div className="repository flex flex-col h-fit w-max">
-			<h3
-				style={{ color: CurrentTheme.Heading2 }}
-				className="text-4xl text-[#d0d0d0] font-semibold mb-[5px]">
-				Portfolio
-			</h3>
-			<p className="text-[#F4EAE0] mb-[1.5vh] text-lg">
-				Attempt to make a portfolio for a web developer (me) with Next JS (Node JS, React,
-				Tailwind).Attempt to make a portfolio for a web developer (me) with Next JS (Node
-				JS, React, Tailwind).Attempt to make a portfolio for a web developer (me) with Next
-				JS (Node JS, React, Tailwind).
-			</p>
+		<div className="repository flex flex-col min-h-[225px] h-fit w-max">
+			<a href={RepositoryData.url} target="_blank">
+				<span
+					style={{ color: CurrentTheme.Heading2 }}
+					className="text-4xl flex gap-[5px] text-[#d0d0d0] font-semibold mb-[5px] items-baseline">
+					{title.toLowerCase().split("-").map(capitalizeFirstLetter).join(" ")}
+					<FaExternalLinkAlt size={15} style={{ fill: CurrentTheme.Heading2 }} />
+				</span>
+			</a>
+
+			<p className="text-[#F4EAE0] mb-[1.5vh]">{RepositoryData.description}</p>
 			<ul className="flex gap-1 repo-tags flex-wrap">
-				{tags.map((tag, index) => {
+				{RepositoryData.topics.map((tag, index) => {
 					return (
 						<li
 							key={index}
@@ -26,7 +32,7 @@ export default function TestComponent() {
 								color: CurrentTheme.Paragraph,
 							}}
 							className="p-3 pt-1 pb-1 w-fit text-2xl rounded-2xl">
-							{tag}
+							{capitalizeFirstLetter(tag)}
 						</li>
 					);
 				})}

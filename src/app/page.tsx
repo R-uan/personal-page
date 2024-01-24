@@ -2,8 +2,9 @@
 import Home from "./_pages/Home";
 import Projects from "./_pages/Projects";
 import ContactMe from "./_pages/ContactMe";
-import Repositories2 from "./_pages/Repositories2";
+import MoreAboutMe from "./_pages/MoreAboutMe";
 import { UseSnapPositionContext } from "./_context/SnapPositionContext";
+import RepositoriesProvider from "./_context/RepositoriesContext";
 
 export default function App() {
 	const { SetCurrentPosition } = UseSnapPositionContext();
@@ -28,8 +29,10 @@ export default function App() {
 	return (
 		<div onScroll={HandleScroll} id="app">
 			<Home />
-			<Projects />
-			<Repositories2 />
+			<RepositoriesProvider>
+				<Projects />
+			</RepositoriesProvider>
+			<MoreAboutMe />
 			<ContactMe />
 		</div>
 	);

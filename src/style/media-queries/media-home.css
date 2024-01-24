@@ -221,14 +221,6 @@
 		height: fit-content;
 	}
 
-	.tech-tooltip {
-		min-height: 1px;
-		height: 0;
-		font-size: 0;
-		top: 90%;
-		transition: all 0.1s;
-	}
-
 	.technologies {
 		margin: 3px;
 		padding: 1px;
@@ -250,6 +242,7 @@
 
 	.tech-tooltip {
 		top: 90%;
+		min-height: 1px;
 		left: -0.4px;
 		font-size: 0;
 		visibility: hidden;
@@ -264,7 +257,7 @@
 			min-height: 5px;
 			font-size: 0.875rem;
 			visibility: visible;
-			transition: font-size 0.1s ease;
+			transition: all 0.1s ease;
 		}
 	}
 }

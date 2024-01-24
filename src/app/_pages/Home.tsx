@@ -27,12 +27,12 @@ export default function Home() {
 			className="flex flex-row sliders pt-[7vh] relative overflow-hidden">
 			<div className="landing-child-1 flex flex-col w-[clamp(728px,50vw,50vw)] h-fit ml-[7vw] mt-[10vh] z-4 ">
 				<div className="landing-child-2 w-[clamp(468px,50vw,50vw)] h-fit flex flex-col justify-center leading-snug ">
-					<span className="w-fit ml-1 font-mono text-[clamp(17px,2.3vh,2.3vh)] italic animate-fadeInLeft animation-delay-100">
+					<span className="w-fit mb-[3px] leading-3 ml-1 font-mono text-[clamp(17px,2.3vh,2.3vh)] italic animate-fadeInLeft animation-delay-100">
 						Hi, I am
 					</span>
 					<h1
 						style={{ color: `${CurrentTheme.Heading1}` }}
-						className="font-systemui font-thin mb-[5px] w-fit -mt-2.5 text-[clamp(40px,8vh,80px)] animate-fadeInLeft leading-[1] animation-delay-200">
+						className="font-systemui  font-thin mb-[5px] w-fit -mt-2.5 text-[clamp(40px,8vh,80px)] animate-fadeInLeft leading-[1] animation-delay-200">
 						Ruan Lopes.
 					</h1>
 					<h3
