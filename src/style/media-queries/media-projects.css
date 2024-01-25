@@ -23,7 +23,7 @@
 		height: fit-content;
 		flex-direction: column;
 		outline: 2px solid white;
-		padding: clamp(5px, 3vw, 10px);
+		padding: clamp(5px, 3vw, 20px);
 	}
 
 	.main-box-projects > span {
