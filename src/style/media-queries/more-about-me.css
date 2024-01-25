@@ -1,58 +1,91 @@
-#about-me {
-	display: flex;
-	flex-direction: column;
-	gap: 5vh;
-}
-.main-box {
-	display: flex;
-	flex-direction: column;
-	padding: 5px;
-	height: 75vh;
-	gap: 2vh;
-	outline: 2px solid white;
+@media screen {
+	#about-me {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.main-box {
+		width: 90vw;
+		position: relative;
+		height: fit-content;
+		outline: 2px solid white;
+		padding: clamp(5px, 3vw, 10px);
+	}
+
+	.main-box > span {
+		width: 100%;
+		padding: 5px;
+		display: flex;
+		justify-content: end;
+		font-size: clamp(1rem, 6vw, 4rem);
+		line-height: clamp(1rem, 6vw, 4rem);
+		font-family: "Bebas Neue", sans-serif;
+	}
+
+	.content-box {
+		width: 100%;
+		display: flex;
+		padding: 2.5px;
+		height: fit-content;
+		flex-direction: column;
+		gap: clamp(10px, 2vh, 15px);
+		/* outline: 2px solid red */
+	}
+
+	.sub-box {
+		padding: 2.5px;
+		height: fit-content;
+		/* outline: 2px solid green; */
+	}
+
+	.text-content {
+		gap: 2vh;
+		width: 100%;
+		padding: 5px;
+		display: flex;
+		height: fit-content;
+		flex-direction: column;
+		/* outline: 2px solid blue; */
+	}
+
+	.text-content > span {
+		font-size: clamp(1rem, 6vw, 4rem);
+		line-height: clamp(1rem, 6vw, 4rem);
+		font-family: "Bebas Neue", sans-serif;
+	}
+
+	.text-content > p {
+		font-size: clamp(1rem, 2.4vh, 3rem);
+	}
+
+	.other-content {
+		gap: 20px;
+		width: 35vw;
+		padding: 5px;
+		display: flex;
+		height: fit-content;
+		/* outline: 2px solid rgb(255, 0, 0); */
+	}
+
+	.other-content > a > span {
+		font-size: clamp(1.25rem, 2vw, 4rem);
+	}
 }
 
-.main-box > span {
-	display: flex;
-	justify-content: end;
-	line-height: 1;
-	font-size: 3rem;
-	width: 100%;
-	font-family: "Bebas Neue", sans-serif;
-}
+@media screen and (min-width: 1260px) {
+	.content-box {
+		gap: 5vw;
+		height: 78vh;
+		flex-direction: row;
+	}
+	.sub-box {
+		height: 90%;
+	}
 
-.content-box {
-	display: flex;
-	padding: 10px;
-	gap: 5vw;
-	width: fit-content;
-	height: 100%;
-	/* outline: 2px solid yellow; */
-}
-
-.text-content {
-	width: 35vw;
-	padding: 5px;
-	height: 35vh;
-	display: flex;
-	gap: 2vh;
-	flex-direction: column;
-	/* outline: 2px solid blue; */
-}
-
-.other-content {
-	width: 35vw;
-	height: 15vh;
-	padding: 5px;
-	/* outline: 2px solid rgb(255, 0, 0); */
-}
-
-.text-content > span {
-	font-size: 2.75rem;
-	line-height: 2rem;
-	font-family: "Bebas Neue", sans-serif;
-}
-
-.text-content > p {
-	font-size: 1.1rem;
+	.main-box {
+		position: relative;
+		height: 90vh;
+	}
 }

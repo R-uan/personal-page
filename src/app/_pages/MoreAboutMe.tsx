@@ -1,6 +1,5 @@
 import "../../style/media-queries/more-about-me.css";
-import { IoLogoGithub } from "react-icons/io5";
-import { SiCodewars } from "react-icons/si";
+import { ProfessionalSocialMedia } from "../_components/Socials";
 import { UseColorThemeContext } from "../_context/ColorThemeContext";
 
 export default function MoreAboutMe() {
@@ -10,7 +9,7 @@ export default function MoreAboutMe() {
 			<div className="main-box">
 				<span style={{ color: CurrentTheme.RightBackground }}>More About me</span>
 				<div className="content-box">
-					<div className="flex flex-col gap-[2vh]">
+					<div className="sub-box flex flex-col gap-[2vh]">
 						<section className="text-content">
 							<span style={{ color: CurrentTheme.Heading2 }}>Hello World</span>
 							<p style={{ color: CurrentTheme.Paragraph }}>
@@ -21,13 +20,15 @@ export default function MoreAboutMe() {
 							</p>
 						</section>
 						<section className="other-content">
-							<span>Hello World</span>
+							<ProfessionalSocialMedia />
 						</section>
 					</div>
-					<div className="flex flex-col gap-[2vh]">
-						<section className="other-content">LmaoXd</section>
+					<div className="sub-box flex flex-col gap-[2vh] justify-end">
+						<section className="other-content">
+							<ProfessionalSocialMedia />
+						</section>
 						<section className="text-content">
-							<span style={{ color: CurrentTheme.Heading1 }}>Goodbye World</span>
+							<span style={{ color: CurrentTheme.Heading2 }}>Goodbye World</span>
 							<p style={{ color: CurrentTheme.Paragraph }}>
 								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam
 								blanditiis omnis eaque, veritatis numquam illum facere dolore
