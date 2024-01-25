@@ -57,6 +57,8 @@
 	}
 
 	.repository > a > span {
+		gap: 0.2vw;
+		display: flex;
 		font-size: clamp(1rem, 6vw, 2.5rem);
 		line-height: clamp(1rem, 6vw, 2.5rem);
 		font-family: "Bebas Neue", sans-serif;
@@ -85,8 +87,12 @@
 }
 
 @media screen and (min-width: 1280px) {
+	.main-box-projects {
+		padding-bottom: 6vh;
+	}
 	.repositories {
 		display: grid;
+		row-gap: 8vh;
 		grid-template-columns: 1fr 1fr 1fr 1fr;
 	}
 

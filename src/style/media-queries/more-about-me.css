@@ -9,10 +9,10 @@
 
 	.main-box {
 		width: 90vw;
-		position: relative;
 		height: 90vh;
-		outline: 2px solid white;
 		overflow: scroll;
+		position: relative;
+		outline: 2px solid white;
 		padding: clamp(5px, 3vw, 10px);
 	}
 
@@ -86,6 +86,9 @@
 }
 
 @media screen and (min-width: 1280px) {
+	.main-box {
+		overflow: hidden;
+	}
 	.content-box {
 		gap: 5vw;
 		height: 78vh;

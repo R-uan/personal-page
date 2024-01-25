@@ -1,4 +1,4 @@
-import ProjectRepository from "./ProjectRepository";
+import ProjectRepository from "../_components/ProjectRepository";
 import "../../style/media-queries/media-projects.css";
 import { UseColorThemeContext } from "../_context/ColorThemeContext";
 import { useRepositoriesContext } from "../_context/RepositoriesContext";
