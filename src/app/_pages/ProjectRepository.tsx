@@ -11,18 +11,15 @@ export default function Repository({ RepositoryData }: { RepositoryData: IReposi
 	}
 
 	return (
-		<div className="repository flex flex-col min-h-[225px] h-fit w-max">
+		<div className="repository">
 			<a href={RepositoryData.url} target="_blank">
-				<span
-					style={{ color: CurrentTheme.Heading2 }}
-					className="text-4xl flex gap-[5px] text-[#d0d0d0] font-semibold mb-[5px] items-baseline">
-					{title.toLowerCase().split("-").map(capitalizeFirstLetter).join(" ")}
+				<span style={{ color: CurrentTheme.Heading2 }}>
+					{title.split("-").join(" ")}
 					<FaExternalLinkAlt size={15} style={{ fill: CurrentTheme.Heading2 }} />
 				</span>
 			</a>
-
-			<p className="text-[#F4EAE0] mb-[1.5vh]">{RepositoryData.description}</p>
-			<ul className="flex gap-1 repo-tags flex-wrap">
+			<p style={{ color: CurrentTheme.Paragraph }}>{RepositoryData.description}</p>
+			<ul className="repository-tags">
 				{RepositoryData.topics.map((tag, index) => {
 					return (
 						<li
@@ -30,8 +27,7 @@ export default function Repository({ RepositoryData }: { RepositoryData: IReposi
 							style={{
 								background: CurrentTheme.IconBackground,
 								color: CurrentTheme.Paragraph,
-							}}
-							className="p-3 pt-1 pb-1 w-fit text-2xl rounded-2xl">
+							}}>
 							{capitalizeFirstLetter(tag)}
 						</li>
 					);

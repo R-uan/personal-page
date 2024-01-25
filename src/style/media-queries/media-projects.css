@@ -4,221 +4,98 @@
 	transition: all 0.5s ease;
 }
 
-/* Smarthphone */
 @media screen and (min-width: 360px) /* and (max-width: 1024px) */ {
-	.experience-professional {
-		position: absolute;
-		visibility: hidden;
-	}
-
-	.experiences {
-		width: 90vw;
-		padding: 4px;
-		margin-left: 3vw;
-		align-items: center;
-		padding-bottom: 40px;
-	}
-
-	.experiences > span {
-		width: 100%;
+	#projects {
 		display: flex;
-		/* outline: 2px solid red; */
-		flex-direction: row-reverse;
+		align-items: center;
+		flex-direction: column;
+		justify-content: center;
 	}
 
-	.experiences > span > h1 {
-		line-height: 1;
-		font-size: 1.75rem;
+	.main-box-projects {
+		gap: 2vh;
+		width: 90vw;
+		display: flex;
+		margin-top: 5vh;
+		overflow: scroll;
+		position: relative;
+		margin-bottom: 4vh;
+		height: fit-content;
+		flex-direction: column;
+		outline: 2px solid white;
+		padding: clamp(5px, 3vw, 10px);
+	}
+
+	.main-box-projects > span {
+		width: 100%;
+		padding: 5px;
+		display: flex;
+		justify-content: end;
+		font-size: clamp(1rem, 6vw, 3rem);
+		line-height: clamp(1rem, 6vw, 4rem);
 		font-family: "Bebas Neue", sans-serif;
-	}
-
-	.experience-personal > span > h1,
-	.experience-professional > span > h1 {
-		font-family: "Inter", sans-serif;
 	}
 
 	.repositories {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: 20px;
-		width: fit-content;
-		height: fit-content;
-	}
-
-	.experience-professional,
-	.experience-personal {
-		display: flex;
+		gap: 3vh;
 		width: 100%;
-		align-items: center;
+		display: flex;
+		padding: 2.5px;
+		height: fit-content;
 		flex-direction: column;
-	}
-
-	.experience-personal > span > h1,
-	.experience-professional > span > h1 {
-		font-family: "Bebas Neue", sans-serif;
-		font-size: 1.25rem;
-		line-height: 1.75rem;
-		padding-left: 5px;
+		/* outline: 2px solid blue; */
 	}
 
 	.repository {
+		width: 100%;
 		padding: 5px;
-		width: 97%;
+		display: flex;
+		height: fit-content;
+		flex-direction: column;
+		/* outline: 2px solid red; */
+		gap: clamp(5px, 1vh, 10px);
 	}
 
 	.repository > a > span {
-		font-size: 1.25rem;
-		line-height: 1.75rem;
+		font-size: clamp(1rem, 6vw, 2.5rem);
+		line-height: clamp(1rem, 6vw, 2.5rem);
+		font-family: "Bebas Neue", sans-serif;
 	}
 
 	.repository > p {
-		font-size: 0.875rem;
-		line-height: 1.25rem;
+		font-size: clamp(1rem, 2.4vw, 3rem);
 	}
 
 	.repository > ul > li {
-		font-size: 0.875rem;
-		line-height: 1.25rem;
+		text-align: center;
+		border-radius: 16px;
+		padding-top: clamp(4px, 1.5vw, 4px);
+		padding-left: clamp(12px, 3vw, 12px);
+		padding-right: clamp(12px, 3vw, 12px);
+		padding-bottom: clamp(4px, 1.5vw, 4px);
+		font-size: clamp(0.875rem, 2.4vw, 1rem);
+		line-height: clamp(0.875rem, 2.75vh, 1.25rem);
 	}
 
-	.gh-tags {
-		margin-right: 2px;
-	}
-
-	#about-me {
-		align-items: flex-end;
-		justify-content: flex-start;
-	}
-}
-
-/* Tablet */
-@media screen and (min-width: 768px) {
-	.experience-personal > span > h1 {
-		font-size: 2.25rem /* 36px */;
-		line-height: 2.5rem /* 40px */;
-		padding-left: 5px;
-	}
-
-	.repository {
-		padding: 5px;
-		width: 97%;
-	}
-
-	.repository > h3 {
-		font-size: 2.25rem /* 36px */;
-		line-height: 2.5rem /* 40px */;
-	}
-
-	.repository > p {
-		font-size: 1.375rem /* 24px */;
-		line-height: 2rem /* 32px */;
-	}
-
-	.repository > ul > li {
-		font-size: 1.375rem /* 24px */;
-		line-height: 2rem /* 32px */;
+	.repository-tags {
+		gap: 5px;
+		display: flex;
+		flex-wrap: wrap;
 	}
 }
 
 @media screen and (min-width: 1280px) {
-	#about-me {
-		align-items: center;
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-	}
-
-	.experience-professional {
-		position: relative;
-		overflow: hidden;
-		margin-bottom: 15px;
-		width: fit-content;
-		height: fit-content;
-		visibility: visible;
-		padding-bottom: 0px;
-		/* outline: 2px solid blue; */
-	}
-
-	.experience-personal {
-		height: fit-content;
-		width: fit-content;
-		align-items: flex-start;
-		/* outline: 2px solid orange; */
-	}
-
-	.experiences {
-		gap: 1px;
-		margin-left: 0;
-		margin-top: 40px;
-		overflow: hidden;
-		position: relative;
-		height: fit-content;
-		padding-bottom: 4px;
-		align-items: flex-start;
-		/* outline: 2px solid green; */
-		width: clamp(90vw, 90vw, 90vw);
-	}
-
-	.experiences > span {
-		width: 100%;
-		display: flex;
-		/* outline: 2px solid red; */
-		flex-direction: row-reverse;
-	}
-
-	.experiences > span > h1 {
-		line-height: 1;
-		font-size: 3rem;
-		font-family: "Bebas Neue", sans-serif;
-	}
-
-	.experience-personal > span,
-	.experience-professional > span {
-		margin-bottom: 5vh;
-	}
-
-	.experience-personal > span > h1,
-	.experience-professional > span > h1 {
-		font-size: 2rem;
-		line-height: 2rem;
-		padding-left: 5px;
-		font-family: "Bebas Neue", sans-serif;
-	}
-
-	.repository {
-		width: 150px;
-		width: 322px;
-		padding: 5px;
-		align-items: flex-start;
-		/* outline: 2px solid yellow; */
-	}
-
-	.repository > h3 {
-		line-height: 2rem;
-		font-size: 1.25rem;
-		width: clamp(310px, 20vw, 20vw);
-	}
-
-	.repository > p {
-		height: 70px;
-		line-height: 1rem;
-		font-size: 1rem;
-		margin-bottom: 15px;
-	}
-
-	.repository > ul > li {
-		line-height: 1rem;
-		font-size: 0.875rem;
-	}
 	.repositories {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr 1fr;
-		width: 89vw;
-		margin: 3px;
-		padding: 5px;
-		overflow-y: scroll;
-		flex-direction: row;
-		/* outline: 2px solid purple; */
+	}
+
+	.repository > a > span {
+		font-size: clamp(1rem, 6vw, 2rem);
+		line-height: clamp(1rem, 6vw, 2rem);
+	}
+
+	.repository > p {
+		font-size: clamp(1rem, 1vw, 3rem);
 	}
 }
