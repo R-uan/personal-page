@@ -29,10 +29,10 @@ export default function App() {
 	return (
 		<div onScroll={HandleScroll} id="app">
 			<Home />
+			<MoreAboutMe />
 			<RepositoriesProvider>
 				<Projects />
 			</RepositoriesProvider>
-			<MoreAboutMe />
 			<ContactMe />
 		</div>
 	);

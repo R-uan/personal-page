@@ -1,7 +1,7 @@
 @media screen and (min-width: 360px) and (max-width: 1023px) {
 	.nav-option {
-		width: 5px;
-		height: 5px;
+		width: clamp(5px, 2vw, 13px);
+		height: clamp(5px, 2vw, 13px);
 		display: flex;
 		font-size: 0px;
 		align-items: center;

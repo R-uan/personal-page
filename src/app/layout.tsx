@@ -20,7 +20,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 				<ColorThemeProvider>
 					<SnapPositionProvider>
 						<NavBar />
-						{/* <Header /> */}
+						<Header />
 						{children}
 					</SnapPositionProvider>
 				</ColorThemeProvider>

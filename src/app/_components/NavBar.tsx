@@ -12,8 +12,8 @@ export default function NavBar() {
 	const { CurrentTheme } = UseColorThemeContext();
 	const Pages = [
 		{ name: "Home", _id: "home" },
+		{ name: "About Me", _id: "about-me" },
 		{ name: "Projects", _id: "projects" },
-		{ name: "Projects", _id: "repos" },
 		{ name: "Contact", _id: "contact" },
 	];
 
@@ -23,9 +23,7 @@ export default function NavBar() {
 		document.getElementById(SelectedPage)?.scrollIntoView({ behavior: "smooth" });
 	}
 
-	const ULStyle = `${
-		CurrentPosition! % 2 == 1 ? "text-black bg-[white]" : "text-white bg-[black]"
-	}`;
+	const ULStyle = `${CurrentPosition! == 0 ? "text-black bg-[white]" : "text-white bg-[black]"}`;
 
 	return (
 		<div className="w-fit h-fit absolute right-[2.5vw] z-50 -translate-y-2/4 top-2/4 items ">
@@ -42,6 +40,14 @@ export default function NavBar() {
 									background:
 										CurrentPosition == index
 											? CurrentTheme.IconBackground
+											: CurrentPosition == 0
+											? "black"
+											: "white",
+									color:
+										CurrentPosition == index
+											? CurrentTheme.RightBackground
+											: CurrentPosition == 0
+											? "white"
 											: "black",
 								}}
 								className={`${
