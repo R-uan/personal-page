@@ -1,0 +1,101 @@
+@media screen {
+	.open-menu {
+		z-index: -50;
+		right: 2.5vw;
+		position: absolute;
+		font-size: clamp(1.5rem, 5vw, 2.5rem);
+	}
+
+	.side-menu {
+		top: 0;
+		width: 100vw;
+		height: 100vh;
+		padding: 15px;
+		overflow: hidden;
+		transition: all 0.5s ease;
+	}
+
+	.side-menu-options {
+		line-height: 1.25;
+		border-radius: 2px;
+		transition: font-size 0.2s ease;
+		font-size: clamp(1rem, 10vw, 2rem);
+	}
+
+	.side-menu-options:hover {
+		font-size: clamp(2.25rem, 15vw, 2.38rem);
+		transition: font-size 0.2s ease;
+	}
+
+	.theme-selection {
+		width: clamp(150px, 80vw, 350px);
+	}
+
+	.theme-selection > label {
+		font-size: clamp(0.5rem, 15vw, 1.5rem);
+	}
+
+	.close-menu {
+		font-size: clamp(1.5rem, 5vw, 2rem);
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.side-menu {
+		width: 60vw;
+	}
+
+	.side-menu-options {
+		line-height: 1.25;
+		border-radius: 2px;
+		transition: font-size 0.2s ease;
+		font-size: clamp(1rem, 15vw, 3rem);
+	}
+
+	.theme-selection {
+		width: clamp(150px, 80vw, 450px);
+	}
+
+	.theme-selection > label {
+		font-size: clamp(0.5rem, 15vw, 2.25rem);
+	}
+}
+
+@media screen and (min-width: 1260px) {
+	.open-menu {
+		z-index: -50;
+		right: 2.5vw;
+		font-size: clamp(2rem, 2vw, 3rem);
+		position: absolute;
+	}
+
+	.side-menu {
+		top: 0;
+		right: -20vw;
+		height: 100vh;
+		padding: 15px;
+		visibility: visible;
+		transition: all 0.5s ease;
+		width: clamp(150px, 20vw, 20vw);
+	}
+
+	.side-menu-options {
+		line-height: 1.25;
+		border-radius: 2px;
+		transition: font-size 0.2s ease;
+		font-size: clamp(1rem, 2vw, 1.5rem);
+	}
+
+	.side-menu-options:hover {
+		transition: font-size 0.2s ease;
+		font-size: clamp(1.6rem, 2.5vw, 1.75rem);
+	}
+
+	.theme-selection {
+		width: clamp(150px, 15vw, 15vw);
+	}
+
+	.theme-selection > label {
+		font-size: clamp(0.5rem, 1vw, 1.75rem);
+	}
+}
