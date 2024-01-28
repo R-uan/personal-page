@@ -92,7 +92,7 @@
 	}
 	.repositories {
 		display: grid;
-		row-gap: 8vh;
+		row-gap: 5vh;
 		grid-template-columns: 1fr 1fr 1fr 1fr;
 	}
 

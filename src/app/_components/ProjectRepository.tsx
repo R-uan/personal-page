@@ -4,7 +4,7 @@ import { UseColorThemeContext } from "../_context/ColorThemeContext";
 
 export default function Repository({ RepositoryData }: { RepositoryData: IRepositories }) {
 	const { CurrentTheme } = UseColorThemeContext();
-	let { title, topics } = RepositoryData;
+	let { name, topics } = RepositoryData;
 
 	function capitalizeFirstLetter(word: string) {
 		return word.charAt(0).toUpperCase() + word.slice(1);
@@ -14,7 +14,7 @@ export default function Repository({ RepositoryData }: { RepositoryData: IReposi
 		<div className="repository">
 			<a href={RepositoryData.url} target="_blank">
 				<span style={{ color: CurrentTheme.Heading2 }}>
-					{title.split("-").join(" ")}
+					{name.split("-").join(" ")}
 					<FaExternalLinkAlt size={15} style={{ fill: CurrentTheme.Heading2 }} />
 				</span>
 			</a>

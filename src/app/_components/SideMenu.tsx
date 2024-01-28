@@ -1,14 +1,15 @@
 import { UseColorThemeContext } from "../_context/ColorThemeContext";
-import ColorThemes from "../_scripts/ColorThemes";
-import "../../style/media-queries/side-menu.css";
 import { BsThreeDotsVertical } from "react-icons/bs";
-import { IoMdClose } from "react-icons/io";
-import { useEffect, useState } from "react";
+import ColorThemes from "../_scripts/ColorThemes";
 import { useMediaQuery } from "react-responsive";
+import "../../style/media-queries/side-menu.css";
+import { IoMdClose } from "react-icons/io";
+import { useState } from "react";
 
 export default function SideMenu() {
 	const { CurrentTheme, SetCurrentTheme } = UseColorThemeContext();
 	const [isMenuOpen, setMenu] = useState(false);
+
 	const isDesktop = useMediaQuery({ query: "(min-width: 1260px)" });
 	const isTablet = useMediaQuery({ query: "(min-width: 768px)" });
 
@@ -18,7 +19,7 @@ export default function SideMenu() {
 		return "-100vw";
 	}
 
-	function Handle() {
+	function HandleMenuState() {
 		isMenuOpen ? setMenu(false) : setMenu(true);
 		console.log(isDesktop);
 	}
@@ -36,7 +37,7 @@ export default function SideMenu() {
 
 	return (
 		<>
-			<button onClick={Handle} className="open-menu h-full w-[30px]">
+			<button onClick={HandleMenuState} className="open-menu h-full w-[30px]">
 				<BsThreeDotsVertical style={{ fill: CurrentTheme.IconBackground }} />
 			</button>
 			<div className="side-bar h-full">
@@ -47,7 +48,7 @@ export default function SideMenu() {
 					}}
 					className="side-menu absolute gap-[20px] flex flex-col justify-center">
 					<button
-						onClick={Handle}
+						onClick={HandleMenuState}
 						className="close-menu absolute top-[10px] left-[10px] w-5 h-5">
 						<IoMdClose />
 					</button>
@@ -56,11 +57,11 @@ export default function SideMenu() {
 							<a href="#home">
 								<li className="side-menu-options">Home</li>
 							</a>
+							<a href="#about-me">
+								<li className="side-menu-options">About Me</li>
+							</a>
 							<a href="#projects">
 								<li className="side-menu-options">Featured Projects</li>
-							</a>
-							<a href="">
-								<li className="side-menu-options">I don't know</li>
 							</a>
 							<a href="">
 								<li className="side-menu-options">Either</li>
@@ -87,7 +88,7 @@ export default function SideMenu() {
 					</div>
 				</div>
 				<div
-					onClick={Handle}
+					onClick={HandleMenuState}
 					style={{ visibility: isMenuOpen ? "visible" : "hidden" }}
 					className="absolute left-0 top-0 h-[100vh] w-[100vw] bg-black opacity-35 z-[-10]"></div>
 			</div>
