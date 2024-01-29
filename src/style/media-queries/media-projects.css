@@ -15,6 +15,7 @@
 	.main-box-projects {
 		gap: 2vh;
 		width: 90vw;
+		min-height: 90vh;
 		display: flex;
 		margin-top: 5vh;
 		overflow: scroll;
@@ -88,6 +89,7 @@
 
 @media screen and (min-width: 1280px) {
 	.main-box-projects {
+		min-height: 672px;
 		padding-bottom: 6vh;
 	}
 	.repositories {

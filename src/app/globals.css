@@ -1,21 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400;1,500;1,600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;400;600&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;1,100&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 * {
 	color: white;
-	font-family: "Inconsolata", monospace;
 	scroll-behavior: smooth;
-}
-
-.test {
-	outline: 2px solid red;
+	font-family: "Inconsolata", monospace;
 }
 
 ::-webkit-scrollbar {
@@ -25,9 +17,9 @@
 body {
 	margin: 0;
 	padding: 0;
-	background-color: black;
-	overflow-x: hidden;
 	overflow: hidden;
+	overflow-x: hidden;
+	background-color: black;
 }
 
 #app {

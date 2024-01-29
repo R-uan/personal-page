@@ -1,11 +1,10 @@
 "use client";
 import { useState } from "react";
-import ColorThemes from "../_scripts/ColorThemes";
-import { IoMdClose } from "react-icons/io";
-import "../../style/media-queries/header.css";
-import { BsThreeDotsVertical } from "react-icons/bs";
-import { UseColorThemeContext } from "../_context/ColorThemeContext";
 import SideMenu from "./SideMenu";
+import "../../style/media-queries/header.css";
+import ColorThemes from "../_scripts/ColorThemes";
+import makeGraphqlRequest from "../_scripts/FetchRepositories";
+import { UseColorThemeContext } from "../_context/ColorThemeContext";
 
 export default function Header() {
 	const { CurrentTheme, SetCurrentTheme } = UseColorThemeContext();

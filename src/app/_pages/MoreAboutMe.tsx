@@ -1,5 +1,5 @@
 import "../../style/media-queries/more-about-me.css";
-import { ProfessionalSocialMedia } from "../_components/Socials";
+import { PersonalSocialMedia, ProfessionalSocialMedia } from "../_components/Socials";
 import { UseColorThemeContext } from "../_context/ColorThemeContext";
 
 export default function MoreAboutMe() {
@@ -11,7 +11,7 @@ export default function MoreAboutMe() {
 				<div className="content-box">
 					<div className="sub-box flex flex-col gap-[2vh]">
 						<section className="text-content">
-							<span style={{ color: CurrentTheme.Heading2 }}>Hello World</span>
+							<span style={{ color: CurrentTheme.Heading2 }}>Hello</span>
 							<p style={{ color: CurrentTheme.Paragraph }}>
 								Certified in System Analysis and being self-taught in web
 								development. I have the desire to obtain experience in the industry
@@ -25,15 +25,14 @@ export default function MoreAboutMe() {
 					</div>
 					<div className="sub-box flex flex-col gap-[2vh] justify-end">
 						<section className="other-content">
-							<ProfessionalSocialMedia />
+							<PersonalSocialMedia />
 						</section>
 						<section className="text-content">
-							<span style={{ color: CurrentTheme.Heading2 }}>Goodbye World</span>
+							<span style={{ color: CurrentTheme.Heading2 }}>World</span>
 							<p style={{ color: CurrentTheme.Paragraph }}>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam
-								blanditiis omnis eaque, veritatis numquam illum facere dolore
-								temporibus sapiente sunt, nesciunt inventore, voluptatem quibusdam
-								corrupti sequi beatae voluptates.
+								Besides web-development I have interest in learning
+								Machine-Learning, Large Language Models and other technologies that
+								fall under the Artificial Intelligence category.
 							</p>
 						</section>
 					</div>

@@ -103,6 +103,10 @@
 		height: 90vh;
 	}
 
+	.text-content {
+		min-width: 650px;
+	}
+
 	.text-content > p {
 		font-size: clamp(1rem, 1.5vw, 1.5vw);
 	}

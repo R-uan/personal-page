@@ -1,4 +1,4 @@
-import { IoLogoGithub, IoLogoLinkedin } from "react-icons/io5";
+import { IoLogoGithub, IoLogoLinkedin, IoLogoInstagram } from "react-icons/io5";
 import { SiCodewars } from "react-icons/si";
 
 export function ProfessionalSocialMedia() {
@@ -22,7 +22,7 @@ export function ProfessionalSocialMedia() {
 
 export function PersonalSocialMedia() {
 	const Socials = [
-		{ icon: <IoLogoGithub />, url: "https://github.com/R-uan" },
+		{ icon: <IoLogoInstagram />, url: "https://www.instagram.com/dealingwithruan/" },
 		{ icon: <SiCodewars />, url: "https://www.codewars.com/users/R-uan" },
 		{ icon: <IoLogoLinkedin />, url: "https://www.linkedin.com/in/ruan-lopes-12041b1bb/" },
 	];

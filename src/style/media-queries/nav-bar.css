@@ -1,31 +1,19 @@
 @media screen and (min-width: 360px) and (max-width: 1023px) {
 	.nav-option {
-		width: clamp(5px, 2vw, 13px);
-		height: clamp(5px, 2vw, 13px);
 		display: flex;
-		font-size: 0px;
-		align-items: center;
 		transition: all 0.3s;
 		border-radius: 9999px;
+		width: clamp(5px, 2vw, 13px);
+		height: clamp(5px, 2vw, 13px);
 	}
 }
 
 @media screen and (min-width: 1024px) {
 	.nav-option {
-		display: flex;
 		width: 10px;
 		height: 30px;
-		font-size: 0px;
-		padding-left: 1vh;
-		align-items: center;
-		transition: all 0.3s;
+		display: flex;
 		border-radius: 10px;
-	}
-
-	.nav-option:hover {
-		width: 90px;
-		height: 30px;
-		font-size: 1rem;
 		transition: all 0.3s;
 	}
 }

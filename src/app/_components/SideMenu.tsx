@@ -1,5 +1,6 @@
+"use client";
 import { UseColorThemeContext } from "../_context/ColorThemeContext";
-import { BsThreeDotsVertical } from "react-icons/bs";
+import { BsThreeDots } from "react-icons/bs";
 import ColorThemes from "../_scripts/ColorThemes";
 import { useMediaQuery } from "react-responsive";
 import "../../style/media-queries/side-menu.css";
@@ -38,7 +39,7 @@ export default function SideMenu() {
 	return (
 		<>
 			<button onClick={HandleMenuState} className="open-menu h-full w-[30px]">
-				<BsThreeDotsVertical style={{ fill: CurrentTheme.IconBackground }} />
+				<BsThreeDots style={{ fill: CurrentTheme.IconBackground }} />
 			</button>
 			<div className="side-bar h-full">
 				<div
